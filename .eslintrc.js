@@ -17,6 +17,11 @@ module.exports = {
   plugins: [
     'react',
   ],
+  ignorePatterns: [
+    'node_modules/',
+    'src/imagepool/',
+    'src/styles/',
+  ],
   rules: {
     'react/react-in-jsx-scope': 0,
     'react/jsx-filename-extension': 0,
@@ -25,13 +30,16 @@ module.exports = {
     'react/function-component-definition': ['error', {
       namedComponents: 'arrow-function',
     }],
+    indent: ['off', 'tab'],
     'import/no-extraneous-dependencies': [0, {
       devDependencies: ['*/.prop-types.*'],
       peerDependencies: true,
     }],
     'prefer-template': 0,
     'arrow-parens': [0, 'as-needed'],
-    indent: ['off', 'tab'],
-    'no-array-index-key': ['off', 'index'],
+    'react/no-array-index-key': ['off', 'index'],
+    'no-unused-vars': ['off'],
+    'react/jsx-max-props-per-line': ['off'],
+    'react/jsx-first-prop-new-line': ['off'],
   },
-};
+}
